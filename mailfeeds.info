@@ -1,0 +1,5 @@
+core = 6.x
+name = mailfeeds
+description = POP/IMAP integration with Feeds 
+dependencies[] = feeds
+project = feeds
