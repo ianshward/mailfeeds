@@ -3,15 +3,15 @@
 /**
 * Implementation of hook_feeds_plugins().
 */
-function mailfeed_feeds_plugins() {
+function mailfeeds_feeds_plugins() {
   $info = array();
-  $info['MailFeedsImporter'] = array(
-    'name' => 'Mailfeeds Importer',
-    'description' => 'Importer for mailfeeds.',
+  $info['MailFeedsParser'] = array(
+    'name' => 'Mailfeeds Parser',
+    'description' => 'Parser for mailfeeds.',
     'handler' => array(
-      'parent' => 'FeedsImporter', // A plugin needs to derive either directly or indirectly from FeedsFetcher, FeedsParser or FeedsProcessor.
-      'class' => 'MailFeedsImporter',
-      'file' => 'MailFeedsImporter.inc',
+      'parent' => 'FeedsParser', // A plugin needs to derive either directly or indirectly from FeedsFetcher, FeedsParser or FeedsProcessor.
+      'class' => 'MailFeedsParser',
+      'file' => 'MailFeedsParser.inc',
       'path' => drupal_get_path('module', 'mailfeeds') . '/classes',
     ),
   );
